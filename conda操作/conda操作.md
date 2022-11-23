@@ -6,7 +6,7 @@ activate
 
 路径前面会出现（base），说明已经切换到 conda 环境了。
 
-![1](img\1.png)
+![1](https://github.com/kyrian330/operate/blob/main/conda%E6%93%8D%E4%BD%9C/img/1.png)
 
 
 
@@ -26,7 +26,7 @@ conda create --name dev-env python=3.6.3
 
 输入 y 确认创建。
 
-![2](img\2.png)
+![2](https://github.com/kyrian330/operate/blob/main/conda%E6%93%8D%E4%BD%9C/img/2.png)
 
 
 
@@ -36,7 +36,7 @@ conda create --name dev-env python=3.6.3
 conda env list
 ```
 
-![3](img\3.png)
+![3](https://github.com/kyrian330/operate/blob/main/conda%E6%93%8D%E4%BD%9C/img/3.png)
 
 使用 conda 的一个重要原因是因为不同开发环境间可以快速切换。尽量给每个项目都创建自己的虚拟环境，才能发挥 conda 隔离不同项目、防止所需的库版本发生冲突的优势。
 
@@ -50,7 +50,7 @@ conda activate dev-env
 
 观察路径前的内容，发现成功从 base 切换到 dev-env。
 
-![4](img\4.png)
+![4](https://github.com/kyrian330/operate/blob/main/conda%E6%93%8D%E4%BD%9C/img/4.png)
 
 
 
@@ -62,7 +62,7 @@ python xxx.py
 
 先切换到项目地址，再执行命令。
 
-![5](img\5.png)
+![5](https://github.com/kyrian330/operate/blob/main/conda%E6%93%8D%E4%BD%9C/img/5.png)
 
 
 
@@ -87,13 +87,13 @@ conda env export > environment1.yaml
 
 我会在桌面建文件夹 envs-yaml，进入文件夹再执行命令，这样文件就保存在该文件夹了。
 
-![6](img\6.png)
+![6](https://github.com/kyrian330/operate/blob/main/conda%E6%93%8D%E4%BD%9C/img/6.png)
 
 
 
 yaml格式文件。
 
-![8](img\8.png)
+![8](https://github.com/kyrian330/operate/blob/main/conda%E6%93%8D%E4%BD%9C/img/8.png)
 
 
 
@@ -103,13 +103,13 @@ yaml格式文件。
 
 注意：导入操作存在的意义是，我给你一份环境配置信息，你可以很轻松将环境复制过去。这样 B 机器可以拿到 A 机器的某个环境。现在我们一台电脑要导入同一份环境（我只用一台电脑演示），直接执行命令会报错。我们来观察一下 environment1.yaml。只需要把 第1行name，23行prefix修改一下就行。而如果你电脑的conda 没有dev-env这个名字的环境，是没必要修改的，可以直接执行导入命令。
 
-![8](img\8.png)
+![8](https://github.com/kyrian330/operate/blob/main/conda%E6%93%8D%E4%BD%9C/img/8.png)
 
 
 
 name不能和conda现有环境重名，假设新环境名为 new_env。
 
-![11](img\10.png)
+![11](https://github.com/kyrian330/operate/blob/main/conda%E6%93%8D%E4%BD%9C/img/10.png)
 
 
 
@@ -117,13 +117,13 @@ name不能和conda现有环境重名，假设新环境名为 new_env。
 conda env create -f C:\Users\TF\Desktop\envs-yaml\environment1.yaml
 ```
 
-![11](img\11.png)
+![11](https://github.com/kyrian330/operate/blob/main/conda%E6%93%8D%E4%BD%9C/img/11.png)
 
 
 
 切换到 new_env，查看有什么包。
 
-![12](img\12.png)
+![12](https://github.com/kyrian330/operate/blob/main/conda%E6%93%8D%E4%BD%9C/img/12.png)
 
 
 
@@ -133,7 +133,7 @@ conda env create -f C:\Users\TF\Desktop\envs-yaml\environment1.yaml
 pip freeze > requirement.txt
 ```
 
-![13](img\13.png)
+![13](https://github.com/kyrian330/operate/blob/main/conda%E6%93%8D%E4%BD%9C/img/13.png)
 
 文件保存在 C:\Users\TF\Desktop\envs-yaml 下。
 
